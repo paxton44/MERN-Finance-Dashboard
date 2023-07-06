@@ -9,6 +9,7 @@ function App() {
   <div className="app">
     <ThemeProvider theme={theme}>
       <CssBaseline />
+      Hello World
     </ThemeProvider>
   </div>
   ); 
