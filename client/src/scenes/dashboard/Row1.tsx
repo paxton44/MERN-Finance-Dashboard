@@ -108,7 +108,6 @@ const Row1 = () => {
                 />
               </linearGradient>
             </defs>
-            <CartesianGrid strokeDasharray="3 3" />
             <XAxis dataKey="name"  
               tickLine={false} 
               style={{ fontSize: "10px" }} 
