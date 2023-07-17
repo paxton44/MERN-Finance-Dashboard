@@ -7,9 +7,12 @@ import dotenv from "dotenv";
 import helmet from "helmet";
 import morgan from "morgan";
 import kpiRoutes from "./routes/kpi.js";
-// Only use KPI/kpis for seeding new data 
+import productRoutes from "./routes/product.js";
+import transactionRoutes from "./routes/transaction.js";
 // import KPI from "./models/KPI.js";
-// import { kpis } from "./data/data.js";
+// import Product from "./models/Product.js";
+// import Transaction from "./models/Transaction.js";
+// import { kpis, products, transactions } from "./data/data.js";
 
 // Config
 dotenv.config();
@@ -26,6 +29,8 @@ console.log("Hello");
 
 // Routing
 app.use("/kpi", kpiRoutes);
+app.use("/product", productRoutes);
+app.use("/transaction", transactionRoutes);
 
 // Mongoose Setup
 const PORT = process.env.PORT || 9000;
