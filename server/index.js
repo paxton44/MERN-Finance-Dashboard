@@ -6,7 +6,9 @@ import cors from "cors";
 import dotenv from "dotenv";
 import helmet from "helmet";
 import morgan from "morgan";
-// import kpiRoutes from "./routes/kpi.js";
+import kpiRoutes from "./routes/kpi.js";
+import KPI from "./models/KPI.js";
+import { kpis } from "./data/data.js";
 
 // Config
 dotenv.config();
@@ -22,7 +24,7 @@ app.use(cors());
 console.log("Hello");
 
 // Routing
-// app.use("/kpi", kpiRoutes);
+app.use("/kpi", kpiRoutes);
 
 // Mongoose Setup
 const PORT = process.env.PORT || 9000;
@@ -34,6 +36,10 @@ mongoose
 
     .then(async () => {
         app.listen(PORT, () => console.log(`Server Port: ${PORT}`));
+        
+        // This eliminates duplicate data but !!!!!! DO NOT!!!!! use this on real apps because it will delete data unless its backed up
+        await mongoose.connection.db.dropDatabase();
+        KPI.insertMany(kpis);
     })
 
     .catch((error) => console.log(`${error} did not connect`));
