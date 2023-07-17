@@ -1,5 +1,8 @@
-import DashboardBox from "@/components/DashboardBox";
 import { Box, useMediaQuery } from "@mui/material";
+import Row1 from "./Row1";
+import Row2 from "./Row2";
+import Row3 from "./Row3";
+import DashboardBox from "@/components/DashboardBox";
 // Look at gridTemplateArea docs to see how layout applies based on using letters. This is better than flexbox because its not just left -> right or top -> bottom layout
 const gridTemplateLargeScreens = `
   "a b c"
@@ -74,17 +77,20 @@ const Dashboard = () => {
               }
         }
       >
-        {/* Boxes that are each chart for dashboard using DashboardBox a component i created to handle the styling of each box in a more organized way */}
-        <DashboardBox bgcolor="#fff" gridArea="a"></DashboardBox>
-        <DashboardBox bgcolor="#fff" gridArea="b"></DashboardBox>
-        <DashboardBox bgcolor="#fff" gridArea="c"></DashboardBox>
-        <DashboardBox bgcolor="#fff" gridArea="d"></DashboardBox>
-        <DashboardBox bgcolor="#fff" gridArea="e"></DashboardBox>
-        <DashboardBox bgcolor="#fff" gridArea="f"></DashboardBox>
-        <DashboardBox bgcolor="#fff" gridArea="g"></DashboardBox>
-        <DashboardBox bgcolor="#fff" gridArea="h"></DashboardBox>
-        <DashboardBox bgcolor="#fff" gridArea="i"></DashboardBox>
-        <DashboardBox bgcolor="#fff" gridArea="j"></DashboardBox> 
+        {/* <DashboardBox gridArea="a"></DashboardBox>
+        <DashboardBox gridArea="b"></DashboardBox>
+        <DashboardBox gridArea="c"></DashboardBox>
+        <DashboardBox gridArea="d"></DashboardBox>
+        <DashboardBox gridArea="e"></DashboardBox>
+        <DashboardBox gridArea="f"></DashboardBox> 
+        <DashboardBox gridArea="g"></DashboardBox>
+        <DashboardBox gridArea="h"></DashboardBox>
+        <DashboardBox gridArea="i"></DashboardBox>
+        <DashboardBox gridArea="j"></DashboardBox>     */}
+        {/* Refactored and made each row its own file to keep codebase clean and organized. */}
+        <Row1 />
+        <Row2 />
+        <Row3 />
       </Box>
     );
   };
