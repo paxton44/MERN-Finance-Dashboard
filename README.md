@@ -1,6 +1,6 @@
 # Finance Dashboard App with Machine Learning Predictions
 
-This is a guide for building a MERN (MongoDB, Express.js, React, Node.js) Finance Dashboard App with Machine Learning Predictions. The application will utilize various technologies and libraries to provide a powerful and interactive finance dashboard experience.
+This is a Read ME guide for my MERN (MongoDB, Express.js, React, Node.js) Finance Dashboard App with Machine Learning Predictions. The application will utilize various technologies and libraries to provide a powerful and interactive finance dashboard experience.
 
 ## Prerequisites
 
