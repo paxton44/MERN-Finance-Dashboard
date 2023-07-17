@@ -63,6 +63,7 @@ const Row1 = () => {
 
   return (
     <>
+        {/* CHART 1 */}
         <DashboardBox gridArea="a">
         <BoxHeader 
           title="Revenue and Expenses"
@@ -188,13 +189,62 @@ const Row1 = () => {
               type="monotone"
               dataKey="revenue"
               stroke ={palette.primary.main}
-            />
-           
+            />        
           </LineChart>
         </ResponsiveContainer>
-
       </DashboardBox>
-      <DashboardBox gridArea="c"></DashboardBox>  
+
+      {/* CHART 3 */}
+      <DashboardBox gridArea="c">
+      <BoxHeader 
+          title="Revenue Month by Month"
+          subtitle="graph representing the revenue month by month"
+          sideText="+4%"
+        />
+        <ResponsiveContainer width="100%" height="100%">
+          <BarChart
+            width={500}
+            height={300}
+            data={revenue}
+            margin={{
+              top: 17,
+              right: 15,
+              left: -5,
+              bottom: 58,
+            }}
+          >
+             <defs>
+              <linearGradient id="colorRevenue" x1="0" y1="0" x2="0" y2="1">
+                <stop
+                  offset="5%"
+                  stopColor={palette.primary[300]}
+                  stopOpacity={0.5}
+                />
+                <stop
+                  offset="95%"
+                  stopColor={palette.primary[300]}
+                  stopOpacity={0}
+                />
+              </linearGradient>
+            </defs>
+
+            <CartesianGrid vertical={false} stroke={palette.grey[800]} />
+            <XAxis 
+              dataKey="name"  
+              tickLine={false}
+              axisLine={ false } 
+              style={{ fontSize: "10px" }} 
+            />
+            <YAxis 
+              tickLine={false}
+              axisLine={ false }
+              style={{ fontSize: "10px" }}
+            />
+            <Tooltip />
+            <Bar  dataKey="revenue" fill="url(#colorRevenue)" />
+          </BarChart>
+        </ResponsiveContainer>
+      </DashboardBox>  
     </>   
   );
 };
