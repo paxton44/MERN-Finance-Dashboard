@@ -7,8 +7,9 @@ import dotenv from "dotenv";
 import helmet from "helmet";
 import morgan from "morgan";
 import kpiRoutes from "./routes/kpi.js";
-import KPI from "./models/KPI.js";
-import { kpis } from "./data/data.js";
+// Only use KPI/kpis for seeding new data 
+// import KPI from "./models/KPI.js";
+// import { kpis } from "./data/data.js";
 
 // Config
 dotenv.config();
@@ -38,8 +39,9 @@ mongoose
         app.listen(PORT, () => console.log(`Server Port: ${PORT}`));
         
         // This eliminates duplicate data but !!!!!! DO NOT!!!!! use this on real apps because it will delete data unless its backed up
-        await mongoose.connection.db.dropDatabase();
-        KPI.insertMany(kpis);
+        // Only use KPI/kpis for seeding new data for live demo type situation
+        // await mongoose.connection.db.dropDatabase();
+        // KPI.insertMany(kpis);
     })
 
     .catch((error) => console.log(`${error} did not connect`));
