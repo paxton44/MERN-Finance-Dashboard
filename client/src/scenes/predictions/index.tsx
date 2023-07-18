@@ -15,6 +15,7 @@ import {
   XAxis,
   YAxis,
 } from "recharts";
+// Machine Learning Functionality Import https://github.com/tom-alexander/regression-js
 import regression, { DataPoint } from "regression";
 
 const Predictions = () => {
@@ -31,6 +32,7 @@ const Predictions = () => {
           return [i, revenue];
         }
       );
+    //   Using machine learning logic to make yearly regression line
       const regressionLine = regression.linear(formatted);
   
       return monthData.map(({ month, revenue }, i: number) => {

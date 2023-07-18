@@ -64,11 +64,11 @@ Create a `.env` file in the `backend` directory and provide the necessary enviro
 
 ```bash
 # Start the frontend server
-cd frontend
+cd src
 npm run dev
 
 # Start the backend server
-cd ../backend
+cd ../server
 npm run dev
 ```
 
@@ -78,4 +78,3 @@ The frontend will be accessible at `http://localhost:3000`, and the backend API 
 
 - [Flexbox Guide](https://css-tricks.com/snippets/css/a-guide-to-flexbox/) - A comprehensive guide to CSS flexbox layout.
 - [CSS Grid Cheatsheet](https://grid.malven.co/) - A handy cheatsheet for CSS grid layout.
-- [Data Model Diagram](https://lucid.app/lucidchart/23d63d3a...) - A visual representation of the data model used
