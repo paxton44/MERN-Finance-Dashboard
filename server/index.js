@@ -9,12 +9,15 @@ import morgan from "morgan";
 import kpiRoutes from "./routes/kpi.js";
 import productRoutes from "./routes/product.js";
 import transactionRoutes from "./routes/transaction.js";
+
+// These are for seeding the db from the data.js file in the data folder within server
+
 // import KPI from "./models/KPI.js";
 // import Product from "./models/Product.js";
-import Transaction from "./models/Transaction.js";
+// import Transaction from "./models/Transaction.js";
 // import { kpis, products, transactions } from "./data/data.js";
 // import { products } from "./data/data.js";
-import { transactions } from "./data/data.js";
+// import { transactions } from "./data/data.js";
 
 // Config
 dotenv.config();

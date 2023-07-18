@@ -9,6 +9,7 @@ export const api = createApi({
     reducerPath: "main",
     tagTypes: ["Kpis", "Products", "Transactions"],
   // These are the API calls below using the fetchBaseQuery baseUrl
+  // Look at redux tool kit docs for details and examples
   endpoints: (build) => ({
     // This uses the endpoint GetKpis and saves the data in the Kpis tab
     // With typeScript add void to clear errors without having specific arguments
